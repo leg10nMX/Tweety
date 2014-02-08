@@ -16,6 +16,6 @@
 
 - (BOOL)hasAuthorization;
 - (void)requestAuthorizationWithCompletionBlock:(void (^)(BOOL granted, NSError *error))block;
-- (void)fetchTimelineWithCompletionBlock:(void (^)(NSArray* tweetArray))block;
+- (void)fetchTimelineBefore:(NSString*)maxId completionBlock:(void (^)(NSArray* tweetArray))block;
 
 @end

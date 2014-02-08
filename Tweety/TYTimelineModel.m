@@ -15,18 +15,33 @@
 
 @implementation TYTimelineModel
 
-- (NSArray*)tweets {
-  void (^receivedTweets)(NSArray *tweetArray) = ^(NSArray *tweetArray){
-    self.tweets = tweetArray;
+- (NSString*)maxId {
+  NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"id" ascending:NO];
+  NSArray *tweets = [self.tweets sortedArrayUsingDescriptors:@[sortDescriptor]];
+  return [tweets firstObject];
+}
+
+- (void)updateTweets:(NSArray*)tweetArray {
+    if (!self.tweets) {
+      self.tweets = tweetArray;
+    } else {
+      self.tweets = [self.tweets arrayByAddingObjectsFromArray:tweetArray];
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:kTYTweetsReceivedNotification object:nil];
-  };
+}
+
+- (NSArray*)tweets {
   if (!_tweets) {
     if ([[TYTwitter sharedInstance] hasAuthorization]) {
-      [[TYTwitter sharedInstance] fetchTimelineWithCompletionBlock:receivedTweets];
+      [[TYTwitter sharedInstance] fetchTimelineBefore:nil completionBlock:^(NSArray *tweetArray) {
+        [self updateTweets:tweetArray];
+      }];
     } else {
       [[TYTwitter sharedInstance] requestAuthorizationWithCompletionBlock:^(BOOL granted, NSError *error) {
         if (granted) {
-          [[TYTwitter sharedInstance] fetchTimelineWithCompletionBlock:receivedTweets];
+          [[TYTwitter sharedInstance] fetchTimelineBefore:nil completionBlock:^(NSArray *tweetArray) {
+            [self updateTweets:tweetArray];
+          }];
         }
       }];
     }
@@ -40,6 +55,11 @@
 }
 
 - (TYTweet*)tweetAtIndex:(NSInteger)index {
+  if ([self.tweets count] && index == [self.tweets count] - 1) {
+    [[TYTwitter sharedInstance] fetchTimelineBefore:[self maxId] completionBlock:^(NSArray *tweetArray) {
+      [self updateTweets:tweetArray];
+    }];
+  }
   return [[TYTweet alloc] initWithDictionary:[self.tweets objectAtIndex:index]];
 }
 

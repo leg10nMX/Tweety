@@ -9,6 +9,7 @@
 #import "TYTimelineViewController.h"
 #import "TYTimelineModel.h"
 #import "TYTweet.h"
+#import "UIImageView+WebCache.h"
 
 @interface TYTimelineViewController ()
 @property (strong, nonatomic) id tweetsUpdateReceivedObserver;
@@ -51,7 +52,7 @@
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  return 80;
+  return 90;
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   NSString *cellIdentifier = @"YTTimelineCell";
@@ -67,6 +68,10 @@
   TYTweet *tweet = [self.model tweetAtIndex:[indexPath row]];
   [cell.textLabel setText:[NSString stringWithFormat:@"%@", tweet.name]];
   [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", tweet.text]];
+  __weak UITableViewCell *_cell = cell;
+  [cell.imageView setImageWithURL:[NSURL URLWithString:[tweet profileImage]] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+    [_cell setNeedsLayout];
+  }];
   return cell;
 }
 @end

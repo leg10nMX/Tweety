@@ -31,4 +31,9 @@
  *  The text of the tweet
  */
 @property (strong, nonatomic) NSString *text;
+
+/**
+ *  The URL of the profile Image as string.
+ */
+@property (strong, nonatomic) NSString *profileImage;
 @end

@@ -30,8 +30,8 @@ const TYTwitterFramework useFramework = TYTwitterFrameworkiOS;
   return [self.api hasAuthorization];
 }
 
-- (void)fetchTimelineWithCompletionBlock:(void (^)(NSArray *))block {
-  [self.api fetchTimelineWithCompletionBlock:block];
+- (void)fetchTimelineBefore:(NSString*)maxId completionBlock:(void (^)(NSArray *))block {
+  [self.api fetchTimelineBefore:maxId completionBlock:block];
 }
 
 + (instancetype)sharedInstance {

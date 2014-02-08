@@ -32,4 +32,7 @@
   return [self.source objectForKey:@"text"];
 }
 
+- (NSString*)profileImage {
+  return [[self user] objectForKey:@"profile_image_url"];
+}
 @end
