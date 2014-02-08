@@ -8,6 +8,28 @@
 
 #import "TYTweet.h"
 
+@interface TYTweet ()
+@property (strong, nonatomic) NSDictionary* source;
+@end
+
 @implementation TYTweet
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+  if (self = [super init]) {
+    self.source = dictionary;
+  }
+  return self;
+}
+
+- (NSDictionary*)user {
+  return [self.source objectForKey:@"user"];
+}
+
+- (NSString*)name {
+  return [[self user] objectForKey:@"name"];
+}
+
+- (NSString*)text {
+  return [self.source objectForKey:@"text"];
+}
 
 @end

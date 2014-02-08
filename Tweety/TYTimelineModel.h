@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString* kTYTimelineAuthorizationNeededNotification = @"kTYTimelineAuthorizationNeededNotification";
+static NSString *kTYTweetsReceivedNotification = @"kTYTweetsReceivedNotification";
+
 @class TYTweet;
 
 /**
@@ -31,4 +32,5 @@ static NSString* kTYTimelineAuthorizationNeededNotification = @"kTYTimelineAutho
  *  @return An TYTweet for the requested index.
  */
 - (TYTweet*)tweetAtIndex:(NSInteger)index;
+
 @end

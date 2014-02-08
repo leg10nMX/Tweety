@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+
 /**
  *  Protocol to describe the essential elements of a Twitter Framework
  */
 @protocol TYTwitterAPI <NSObject>
+
+- (BOOL)hasAuthorization;
 - (void)requestAuthorizationWithCompletionBlock:(void (^)(BOOL granted, NSError *error))block;
+- (void)fetchTimelineWithCompletionBlock:(void (^)(NSArray* tweetArray))block;
+
 @end

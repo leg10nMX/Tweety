@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TYTimelineViewController">
             <connections>
                 <outlet property="model" destination="NOr-PW-Eru" id="VDQ-f5-4PH"/>
+                <outlet property="tableView" destination="4pZ-2Y-fay" id="DHC-pL-YHC"/>
                 <outlet property="view" destination="qQI-5a-uMb" id="4Mu-OC-3pf"/>
             </connections>
         </placeholder>

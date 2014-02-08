@@ -12,4 +12,5 @@
 @interface TYTimelineViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet TYTimelineModel *model;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

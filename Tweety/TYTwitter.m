@@ -26,6 +26,14 @@ const TYTwitterFramework useFramework = TYTwitterFrameworkiOS;
   [self.api requestAuthorizationWithCompletionBlock:block];
 }
 
+- (BOOL)hasAuthorization {
+  return [self.api hasAuthorization];
+}
+
+- (void)fetchTimelineWithCompletionBlock:(void (^)(NSArray *))block {
+  [self.api fetchTimelineWithCompletionBlock:block];
+}
+
 + (instancetype)sharedInstance {
   static TYTwitter *sharedInstance = nil;
   static dispatch_once_t onceToken;
