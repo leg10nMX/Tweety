@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@interface TYMainViewController : UIViewController <UITableViewDelegate>
 
-@interface TYViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet
 @end

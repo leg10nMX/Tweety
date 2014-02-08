@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Macrominds. All rights reserved.
 //
 
-#import "TYViewController.h"
+#import "TYMainViewController.h"
 
-@interface TYViewController ()
+@interface TYMainViewController ()
 
 @end
 
-@implementation TYViewController
+@implementation TYMainViewController
 
 - (void)viewDidLoad
 {

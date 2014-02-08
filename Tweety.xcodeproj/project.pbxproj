@@ -13,13 +13,16 @@
 		A57DAE0A18A5ACA300DA5F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE0818A5ACA300DA5F60 /* InfoPlist.strings */; };
 		A57DAE0C18A5ACA300DA5F60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE0B18A5ACA300DA5F60 /* main.m */; };
 		A57DAE1018A5ACA300DA5F60 /* TYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE0F18A5ACA300DA5F60 /* TYAppDelegate.m */; };
-		A57DAE1918A5ACA300DA5F60 /* TYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE1818A5ACA300DA5F60 /* TYViewController.m */; };
+		A57DAE1918A5ACA300DA5F60 /* TYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE1818A5ACA300DA5F60 /* TYMainViewController.m */; };
 		A57DAE1B18A5ACA300DA5F60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE1A18A5ACA300DA5F60 /* Images.xcassets */; };
 		A57DAE2218A5ACA300DA5F60 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE2118A5ACA300DA5F60 /* XCTest.framework */; };
 		A57DAE2318A5ACA300DA5F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DADFF18A5ACA300DA5F60 /* Foundation.framework */; };
 		A57DAE2418A5ACA300DA5F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0318A5ACA300DA5F60 /* UIKit.framework */; };
 		A57DAE2C18A5ACA300DA5F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE2A18A5ACA300DA5F60 /* InfoPlist.strings */; };
 		A57DAE2E18A5ACA300DA5F60 /* TweetyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE2D18A5ACA300DA5F60 /* TweetyTests.m */; };
+		A57DAE3918A5B10B00DA5F60 /* TYMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE3818A5B10A00DA5F60 /* TYMainViewController.xib */; };
+		A57DAE3E18A5C05E00DA5F60 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE3D18A5C05E00DA5F60 /* Accounts.framework */; };
+		A57DAE4018A5C0B700DA5F60 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE3F18A5C0B700DA5F60 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,14 +46,17 @@
 		A57DAE0D18A5ACA300DA5F60 /* Tweety-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweety-Prefix.pch"; sourceTree = "<group>"; };
 		A57DAE0E18A5ACA300DA5F60 /* TYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYAppDelegate.h; sourceTree = "<group>"; };
 		A57DAE0F18A5ACA300DA5F60 /* TYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYAppDelegate.m; sourceTree = "<group>"; };
-		A57DAE1718A5ACA300DA5F60 /* TYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYViewController.h; sourceTree = "<group>"; };
-		A57DAE1818A5ACA300DA5F60 /* TYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYViewController.m; sourceTree = "<group>"; };
+		A57DAE1718A5ACA300DA5F60 /* TYMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYMainViewController.h; sourceTree = "<group>"; };
+		A57DAE1818A5ACA300DA5F60 /* TYMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYMainViewController.m; sourceTree = "<group>"; };
 		A57DAE1A18A5ACA300DA5F60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A57DAE2018A5ACA300DA5F60 /* TweetyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57DAE2118A5ACA300DA5F60 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A57DAE2918A5ACA300DA5F60 /* TweetyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TweetyTests-Info.plist"; sourceTree = "<group>"; };
 		A57DAE2B18A5ACA300DA5F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A57DAE2D18A5ACA300DA5F60 /* TweetyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetyTests.m; sourceTree = "<group>"; };
+		A57DAE3818A5B10A00DA5F60 /* TYMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYMainViewController.xib; sourceTree = "<group>"; };
+		A57DAE3D18A5C05E00DA5F60 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A57DAE3F18A5C0B700DA5F60 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A57DAE4018A5C0B700DA5F60 /* Social.framework in Frameworks */,
+				A57DAE3E18A5C05E00DA5F60 /* Accounts.framework in Frameworks */,
 				A57DAE0218A5ACA300DA5F60 /* CoreGraphics.framework in Frameworks */,
 				A57DAE0418A5ACA300DA5F60 /* UIKit.framework in Frameworks */,
 				A57DAE0018A5ACA300DA5F60 /* Foundation.framework in Frameworks */,
@@ -99,6 +107,8 @@
 		A57DADFE18A5ACA300DA5F60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A57DAE3F18A5C0B700DA5F60 /* Social.framework */,
+				A57DAE3D18A5C05E00DA5F60 /* Accounts.framework */,
 				A57DADFF18A5ACA300DA5F60 /* Foundation.framework */,
 				A57DAE0118A5ACA300DA5F60 /* CoreGraphics.framework */,
 				A57DAE0318A5ACA300DA5F60 /* UIKit.framework */,
@@ -110,10 +120,9 @@
 		A57DAE0518A5ACA300DA5F60 /* Tweety */ = {
 			isa = PBXGroup;
 			children = (
+				A57DAE3718A5B09D00DA5F60 /* Controllers */,
 				A57DAE0E18A5ACA300DA5F60 /* TYAppDelegate.h */,
 				A57DAE0F18A5ACA300DA5F60 /* TYAppDelegate.m */,
-				A57DAE1718A5ACA300DA5F60 /* TYViewController.h */,
-				A57DAE1818A5ACA300DA5F60 /* TYViewController.m */,
 				A57DAE1A18A5ACA300DA5F60 /* Images.xcassets */,
 				A57DAE0618A5ACA300DA5F60 /* Supporting Files */,
 			);
@@ -147,6 +156,16 @@
 				A57DAE2A18A5ACA300DA5F60 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A57DAE3718A5B09D00DA5F60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A57DAE1718A5ACA300DA5F60 /* TYMainViewController.h */,
+				A57DAE1818A5ACA300DA5F60 /* TYMainViewController.m */,
+				A57DAE3818A5B10A00DA5F60 /* TYMainViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +247,7 @@
 			files = (
 				A57DAE1B18A5ACA300DA5F60 /* Images.xcassets in Resources */,
 				A57DAE0A18A5ACA300DA5F60 /* InfoPlist.strings in Resources */,
+				A57DAE3918A5B10B00DA5F60 /* TYMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +268,7 @@
 			files = (
 				A57DAE0C18A5ACA300DA5F60 /* main.m in Sources */,
 				A57DAE1018A5ACA300DA5F60 /* TYAppDelegate.m in Sources */,
-				A57DAE1918A5ACA300DA5F60 /* TYViewController.m in Sources */,
+				A57DAE1918A5ACA300DA5F60 /* TYMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tweety/Tweety-Prefix.pch";
 				INFOPLIST_FILE = "Tweety/Tweety-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,6 +406,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tweety/Tweety-Prefix.pch";
 				INFOPLIST_FILE = "Tweety/Tweety-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
