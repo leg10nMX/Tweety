@@ -20,7 +20,7 @@
 		A57DAE2418A5ACA300DA5F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0318A5ACA300DA5F60 /* UIKit.framework */; };
 		A57DAE2C18A5ACA300DA5F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE2A18A5ACA300DA5F60 /* InfoPlist.strings */; };
 		A57DAE2E18A5ACA300DA5F60 /* TweetyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE2D18A5ACA300DA5F60 /* TweetyTests.m */; };
-		A57DAE3918A5B10B00DA5F60 /* TYMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE3818A5B10A00DA5F60 /* TYMainViewController.xib */; };
+		A57DAE3918A5B10B00DA5F60 /* TYTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE3818A5B10A00DA5F60 /* TYTimelineViewController.xib */; };
 		A57DAE3E18A5C05E00DA5F60 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE3D18A5C05E00DA5F60 /* Accounts.framework */; };
 		A57DAE4018A5C0B700DA5F60 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE3F18A5C0B700DA5F60 /* Social.framework */; };
 		A5CB2BF018A5C3CC00EACA57 /* TYTimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CB2BEF18A5C3CC00EACA57 /* TYTimelineModel.m */; };
@@ -55,7 +55,7 @@
 		A57DAE2918A5ACA300DA5F60 /* TweetyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TweetyTests-Info.plist"; sourceTree = "<group>"; };
 		A57DAE2B18A5ACA300DA5F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A57DAE2D18A5ACA300DA5F60 /* TweetyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetyTests.m; sourceTree = "<group>"; };
-		A57DAE3818A5B10A00DA5F60 /* TYMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYMainViewController.xib; sourceTree = "<group>"; };
+		A57DAE3818A5B10A00DA5F60 /* TYTimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYTimelineViewController.xib; sourceTree = "<group>"; };
 		A57DAE3D18A5C05E00DA5F60 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A57DAE3F18A5C0B700DA5F60 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A5CB2BEE18A5C3CC00EACA57 /* TYTimelineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTimelineModel.h; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			children = (
 				A57DAE1718A5ACA300DA5F60 /* TYTimelineViewController.h */,
 				A57DAE1818A5ACA300DA5F60 /* TYTimelineViewController.m */,
-				A57DAE3818A5B10A00DA5F60 /* TYMainViewController.xib */,
+				A57DAE3818A5B10A00DA5F60 /* TYTimelineViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -260,7 +260,7 @@
 			files = (
 				A57DAE1B18A5ACA300DA5F60 /* Images.xcassets in Resources */,
 				A57DAE0A18A5ACA300DA5F60 /* InfoPlist.strings in Resources */,
-				A57DAE3918A5B10B00DA5F60 /* TYMainViewController.xib in Resources */,
+				A57DAE3918A5B10B00DA5F60 /* TYTimelineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

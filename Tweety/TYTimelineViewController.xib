@@ -5,8 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TYMainViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TYTimelineViewController">
             <connections>
+                <outlet property="model" destination="NOr-PW-Eru" id="VDQ-f5-4PH"/>
                 <outlet property="view" destination="qQI-5a-uMb" id="4Mu-OC-3pf"/>
             </connections>
         </placeholder>
@@ -34,5 +35,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
+        <customObject id="NOr-PW-Eru" customClass="TYTimelineModel"/>
     </objects>
 </document>

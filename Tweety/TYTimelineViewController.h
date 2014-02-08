@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface TYTimelineViewController : UIViewController <UITableViewDelegate>
 
-@property (strong, nonatomic) IBOutlet
+@class TYTimelineModel;
+@interface TYTimelineViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet TYTimelineModel *model;
 @end
