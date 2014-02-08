@@ -47,16 +47,24 @@
 }
 
 - (void)fetchTimelineBefore:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
-  NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObject:@"count" forKey: @"10"];
+  NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObject:@"count"
+                                                                       forKey: @"10"];
   if (maxId) {
     [parameters setObject:maxId forKey:@"max_id"];
   }
   NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json"];
-  SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:url parameters:parameters];
+  SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
+                                          requestMethod:SLRequestMethodGET
+                                                    URL:url
+                                             parameters:parameters];
   request.account = self.account;
   [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-    NSArray *tweets = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&error];
-    block(tweets);
+    if (responseData) {
+      NSArray *tweets = [NSJSONSerialization JSONObjectWithData:responseData
+                                                        options:NSJSONReadingMutableLeaves
+                                                          error:&error];
+      block(tweets);
+    }
   }];
 }
 @end
