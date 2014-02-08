@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString* kTYTimelineAuthorizationNeededNotification = @"kTYTimelineAuthorizationNeededNotification";
+
 @interface TYTimelineModel : NSObject
 
 @end
