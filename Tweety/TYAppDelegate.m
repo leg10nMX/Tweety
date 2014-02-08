@@ -7,13 +7,13 @@
 //
 
 #import "TYAppDelegate.h"
-#import "TYMainViewController.h"
+#import "TYTimelineViewController.h"
 
 @implementation TYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  self.window.rootViewController = [[TYMainViewController alloc] initWithNibName:@"TYTimelineViewController" bundle:[NSBundle mainBundle]];
+  self.window.rootViewController = [[TYTimelineViewController alloc] initWithNibName:@"TYTimelineViewController" bundle:[NSBundle mainBundle]];
   [self.window makeKeyAndVisible];
   return YES;
 }

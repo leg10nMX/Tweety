@@ -7,7 +7,18 @@
 //
 
 #import "TYTimelineModel.h"
+#import "TYTweet.h"
+@interface TYTimelineModel ()
+@property (strong,nonatomic) NSMutableArray *tweets;
+@end
 
 @implementation TYTimelineModel
 
+- (NSInteger)count {
+  return [self.tweets count];
+}
+
+- (TYTweet*)tweetAtIndex:(NSInteger)index {
+  return [self.tweets objectAtIndex:index];
+}
 @end

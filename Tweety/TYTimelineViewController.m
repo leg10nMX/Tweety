@@ -8,6 +8,7 @@
 
 #import "TYTimelineViewController.h"
 #import "TYTimelineModel.h"
+#import "TYTweet.h"
 
 @interface TYTimelineViewController ()
 @property (strong, nonatomic) id authorizationNeededObserver;
@@ -15,18 +16,16 @@
 
 @implementation TYTimelineViewController
 #pragma mark - Lifecycle
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  
   __weak TYTimelineViewController* _self = self;
   self.authorizationNeededObserver = [[NSNotificationCenter defaultCenter] addObserverForName:kTYTimelineAuthorizationNeededNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
     [_self presentLogin];
   }];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -41,9 +40,25 @@
 }
 
 #pragma mark - Protocols
-#pragma mark UITableViewDelegate
-
-
 #pragma mark UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return [self.model count];
+}
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
+}
+
+#pragma mark UITableViewDelegate
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  NSString *cellIdentifier = @"YTTimelineCell";
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+  if (!cell) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+  }
+  TYTweet *tweet = [self.model tweetAtIndex:[indexPath row]];
+  [cell.textLabel setText:[NSString stringWithFormat:@"%@", tweet.name]];
+  [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", tweet.text]];
+  return cell;
+}
 @end
