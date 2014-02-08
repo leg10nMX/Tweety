@@ -13,8 +13,6 @@
 		A57DAE0A18A5ACA300DA5F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE0818A5ACA300DA5F60 /* InfoPlist.strings */; };
 		A57DAE0C18A5ACA300DA5F60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE0B18A5ACA300DA5F60 /* main.m */; };
 		A57DAE1018A5ACA300DA5F60 /* TYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE0F18A5ACA300DA5F60 /* TYAppDelegate.m */; };
-		A57DAE1318A5ACA300DA5F60 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE1118A5ACA300DA5F60 /* Main_iPhone.storyboard */; };
-		A57DAE1618A5ACA300DA5F60 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE1418A5ACA300DA5F60 /* Main_iPad.storyboard */; };
 		A57DAE1918A5ACA300DA5F60 /* TYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE1818A5ACA300DA5F60 /* TYViewController.m */; };
 		A57DAE1B18A5ACA300DA5F60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE1A18A5ACA300DA5F60 /* Images.xcassets */; };
 		A57DAE2218A5ACA300DA5F60 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE2118A5ACA300DA5F60 /* XCTest.framework */; };
@@ -45,8 +43,6 @@
 		A57DAE0D18A5ACA300DA5F60 /* Tweety-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweety-Prefix.pch"; sourceTree = "<group>"; };
 		A57DAE0E18A5ACA300DA5F60 /* TYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYAppDelegate.h; sourceTree = "<group>"; };
 		A57DAE0F18A5ACA300DA5F60 /* TYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYAppDelegate.m; sourceTree = "<group>"; };
-		A57DAE1218A5ACA300DA5F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		A57DAE1518A5ACA300DA5F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		A57DAE1718A5ACA300DA5F60 /* TYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYViewController.h; sourceTree = "<group>"; };
 		A57DAE1818A5ACA300DA5F60 /* TYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYViewController.m; sourceTree = "<group>"; };
 		A57DAE1A18A5ACA300DA5F60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -116,8 +112,6 @@
 			children = (
 				A57DAE0E18A5ACA300DA5F60 /* TYAppDelegate.h */,
 				A57DAE0F18A5ACA300DA5F60 /* TYAppDelegate.m */,
-				A57DAE1118A5ACA300DA5F60 /* Main_iPhone.storyboard */,
-				A57DAE1418A5ACA300DA5F60 /* Main_iPad.storyboard */,
 				A57DAE1718A5ACA300DA5F60 /* TYViewController.h */,
 				A57DAE1818A5ACA300DA5F60 /* TYViewController.m */,
 				A57DAE1A18A5ACA300DA5F60 /* Images.xcassets */,
@@ -232,9 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A57DAE1618A5ACA300DA5F60 /* Main_iPad.storyboard in Resources */,
 				A57DAE1B18A5ACA300DA5F60 /* Images.xcassets in Resources */,
-				A57DAE1318A5ACA300DA5F60 /* Main_iPhone.storyboard in Resources */,
 				A57DAE0A18A5ACA300DA5F60 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,22 +277,6 @@
 				A57DAE0918A5ACA300DA5F60 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A57DAE1118A5ACA300DA5F60 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A57DAE1218A5ACA300DA5F60 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		A57DAE1418A5ACA300DA5F60 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A57DAE1518A5ACA300DA5F60 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		A57DAE2A18A5ACA300DA5F60 /* InfoPlist.strings */ = {
