@@ -25,6 +25,10 @@
 		A57DAE4018A5C0B700DA5F60 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE3F18A5C0B700DA5F60 /* Social.framework */; };
 		A5CB2BF018A5C3CC00EACA57 /* TYTimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CB2BEF18A5C3CC00EACA57 /* TYTimelineModel.m */; };
 		A5FE0DE618A5F1180013FA04 /* TYTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE0DE518A5F1180013FA04 /* TYTweet.m */; };
+		A5FE0DEC18A5F93D0013FA04 /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE0DEA18A5F93D0013FA04 /* TYLoginViewController.m */; };
+		A5FE0DED18A5F93D0013FA04 /* TYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FE0DEB18A5F93D0013FA04 /* TYLoginViewController.xib */; };
+		A5FE0DF318A5FC3D0013FA04 /* TYTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE0DF218A5FC3D0013FA04 /* TYTwitter.m */; };
+		A5FE0DF618A683C00013FA04 /* TYTwitteriOS.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE0DF518A683C00013FA04 /* TYTwitteriOS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,14 @@
 		A5CB2BEF18A5C3CC00EACA57 /* TYTimelineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTimelineModel.m; sourceTree = "<group>"; };
 		A5FE0DE418A5F1180013FA04 /* TYTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTweet.h; sourceTree = "<group>"; };
 		A5FE0DE518A5F1180013FA04 /* TYTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTweet.m; sourceTree = "<group>"; };
+		A5FE0DE918A5F93D0013FA04 /* TYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLoginViewController.h; sourceTree = "<group>"; };
+		A5FE0DEA18A5F93D0013FA04 /* TYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
+		A5FE0DEB18A5F93D0013FA04 /* TYLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYLoginViewController.xib; sourceTree = "<group>"; };
+		A5FE0DF118A5FC3D0013FA04 /* TYTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTwitter.h; sourceTree = "<group>"; };
+		A5FE0DF218A5FC3D0013FA04 /* TYTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTwitter.m; sourceTree = "<group>"; };
+		A5FE0DF418A683C00013FA04 /* TYTwitteriOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTwitteriOS.h; sourceTree = "<group>"; };
+		A5FE0DF518A683C00013FA04 /* TYTwitteriOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTwitteriOS.m; sourceTree = "<group>"; };
+		A5FE0DF718A684450013FA04 /* TYTwitterAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYTwitterAPI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +138,7 @@
 		A57DAE0518A5ACA300DA5F60 /* Tweety */ = {
 			isa = PBXGroup;
 			children = (
+				A5FE0DF018A5FBF70013FA04 /* Business Objects */,
 				A5CB2BED18A5C3AF00EACA57 /* Models */,
 				A57DAE3718A5B09D00DA5F60 /* Controllers */,
 				A57DAE0E18A5ACA300DA5F60 /* TYAppDelegate.h */,
@@ -168,9 +181,8 @@
 		A57DAE3718A5B09D00DA5F60 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A57DAE1718A5ACA300DA5F60 /* TYTimelineViewController.h */,
-				A57DAE1818A5ACA300DA5F60 /* TYTimelineViewController.m */,
-				A57DAE3818A5B10A00DA5F60 /* TYTimelineViewController.xib */,
+				A5FE0DE818A5F9110013FA04 /* Login */,
+				A5FE0DE718A5F9040013FA04 /* Timeline */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -178,12 +190,60 @@
 		A5CB2BED18A5C3AF00EACA57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A5FE0DEE18A5FB670013FA04 /* Timeline */,
+				A5FE0DEF18A5FB760013FA04 /* Tweet */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A5FE0DE718A5F9040013FA04 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				A57DAE1718A5ACA300DA5F60 /* TYTimelineViewController.h */,
+				A57DAE1818A5ACA300DA5F60 /* TYTimelineViewController.m */,
+				A57DAE3818A5B10A00DA5F60 /* TYTimelineViewController.xib */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		A5FE0DE818A5F9110013FA04 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A5FE0DE918A5F93D0013FA04 /* TYLoginViewController.h */,
+				A5FE0DEA18A5F93D0013FA04 /* TYLoginViewController.m */,
+				A5FE0DEB18A5F93D0013FA04 /* TYLoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		A5FE0DEE18A5FB670013FA04 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
 				A5CB2BEE18A5C3CC00EACA57 /* TYTimelineModel.h */,
 				A5CB2BEF18A5C3CC00EACA57 /* TYTimelineModel.m */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		A5FE0DEF18A5FB760013FA04 /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
 				A5FE0DE418A5F1180013FA04 /* TYTweet.h */,
 				A5FE0DE518A5F1180013FA04 /* TYTweet.m */,
 			);
-			name = Models;
+			name = Tweet;
+			sourceTree = "<group>";
+		};
+		A5FE0DF018A5FBF70013FA04 /* Business Objects */ = {
+			isa = PBXGroup;
+			children = (
+				A5FE0DF718A684450013FA04 /* TYTwitterAPI.h */,
+				A5FE0DF118A5FC3D0013FA04 /* TYTwitter.h */,
+				A5FE0DF218A5FC3D0013FA04 /* TYTwitter.m */,
+				A5FE0DF418A683C00013FA04 /* TYTwitteriOS.h */,
+				A5FE0DF518A683C00013FA04 /* TYTwitteriOS.m */,
+			);
+			name = "Business Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +326,7 @@
 				A57DAE1B18A5ACA300DA5F60 /* Images.xcassets in Resources */,
 				A57DAE0A18A5ACA300DA5F60 /* InfoPlist.strings in Resources */,
 				A57DAE3918A5B10B00DA5F60 /* TYTimelineViewController.xib in Resources */,
+				A5FE0DED18A5F93D0013FA04 /* TYLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +348,11 @@
 				A57DAE0C18A5ACA300DA5F60 /* main.m in Sources */,
 				A5CB2BF018A5C3CC00EACA57 /* TYTimelineModel.m in Sources */,
 				A57DAE1018A5ACA300DA5F60 /* TYAppDelegate.m in Sources */,
+				A5FE0DEC18A5F93D0013FA04 /* TYLoginViewController.m in Sources */,
+				A5FE0DF618A683C00013FA04 /* TYTwitteriOS.m in Sources */,
 				A57DAE1918A5ACA300DA5F60 /* TYTimelineViewController.m in Sources */,
 				A5FE0DE618A5F1180013FA04 /* TYTweet.m in Sources */,
+				A5FE0DF318A5FC3D0013FA04 /* TYTwitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
