@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TYTimelineViewController alloc] initWithNibName:@"TYTimelineViewController" bundle:[NSBundle mainBundle]]];
+  self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TYTimelineViewController alloc] initWithNibName:@"TYTweetFeedViewController" bundle:[NSBundle mainBundle]]];
   [self.window makeKeyAndVisible];
   return YES;
 }

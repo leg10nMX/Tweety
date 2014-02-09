@@ -28,20 +28,21 @@
 		A55CCF6E18A7108D007BB860 /* TYAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF6D18A7108D007BB860 /* TYAccount.m */; };
 		A55CCF7518A7D658007BB860 /* TYTweetSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF7418A7D658007BB860 /* TYTweetSource.m */; };
 		A55CCF7918A7D9E5007BB860 /* TYUserTweets.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF7818A7D9E5007BB860 /* TYUserTweets.m */; };
+		A55CCF7E18A81958007BB860 /* TYTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF7D18A81958007BB860 /* TYTimelineViewController.m */; };
 		A57DAE0018A5ACA300DA5F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DADFF18A5ACA300DA5F60 /* Foundation.framework */; };
 		A57DAE0218A5ACA300DA5F60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0118A5ACA300DA5F60 /* CoreGraphics.framework */; };
 		A57DAE0418A5ACA300DA5F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0318A5ACA300DA5F60 /* UIKit.framework */; };
 		A57DAE0A18A5ACA300DA5F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE0818A5ACA300DA5F60 /* InfoPlist.strings */; };
 		A57DAE0C18A5ACA300DA5F60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE0B18A5ACA300DA5F60 /* main.m */; };
 		A57DAE1018A5ACA300DA5F60 /* TYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE0F18A5ACA300DA5F60 /* TYAppDelegate.m */; };
-		A57DAE1918A5ACA300DA5F60 /* TYTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE1818A5ACA300DA5F60 /* TYTimelineViewController.m */; };
+		A57DAE1918A5ACA300DA5F60 /* TYTweetFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE1818A5ACA300DA5F60 /* TYTweetFeedViewController.m */; };
 		A57DAE1B18A5ACA300DA5F60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE1A18A5ACA300DA5F60 /* Images.xcassets */; };
 		A57DAE2218A5ACA300DA5F60 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE2118A5ACA300DA5F60 /* XCTest.framework */; };
 		A57DAE2318A5ACA300DA5F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DADFF18A5ACA300DA5F60 /* Foundation.framework */; };
 		A57DAE2418A5ACA300DA5F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0318A5ACA300DA5F60 /* UIKit.framework */; };
 		A57DAE2C18A5ACA300DA5F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE2A18A5ACA300DA5F60 /* InfoPlist.strings */; };
 		A57DAE2E18A5ACA300DA5F60 /* TweetyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A57DAE2D18A5ACA300DA5F60 /* TweetyTests.m */; };
-		A57DAE3918A5B10B00DA5F60 /* TYTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE3818A5B10A00DA5F60 /* TYTimelineViewController.xib */; };
+		A57DAE3918A5B10B00DA5F60 /* TYTweetFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57DAE3818A5B10A00DA5F60 /* TYTweetFeedViewController.xib */; };
 		A57DAE3E18A5C05E00DA5F60 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE3D18A5C05E00DA5F60 /* Accounts.framework */; };
 		A57DAE4018A5C0B700DA5F60 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE3F18A5C0B700DA5F60 /* Social.framework */; };
 		A5CB2BF018A5C3CC00EACA57 /* TYTimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CB2BEF18A5C3CC00EACA57 /* TYTimelineModel.m */; };
@@ -104,6 +105,8 @@
 		A55CCF7418A7D658007BB860 /* TYTweetSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTweetSource.m; sourceTree = "<group>"; };
 		A55CCF7718A7D9E5007BB860 /* TYUserTweets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYUserTweets.h; sourceTree = "<group>"; };
 		A55CCF7818A7D9E5007BB860 /* TYUserTweets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYUserTweets.m; sourceTree = "<group>"; };
+		A55CCF7C18A81958007BB860 /* TYTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTimelineViewController.h; sourceTree = "<group>"; };
+		A55CCF7D18A81958007BB860 /* TYTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTimelineViewController.m; sourceTree = "<group>"; };
 		A57DADFC18A5ACA300DA5F60 /* Tweety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57DADFF18A5ACA300DA5F60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A57DAE0118A5ACA300DA5F60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,15 +117,15 @@
 		A57DAE0D18A5ACA300DA5F60 /* Tweety-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweety-Prefix.pch"; sourceTree = "<group>"; };
 		A57DAE0E18A5ACA300DA5F60 /* TYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYAppDelegate.h; sourceTree = "<group>"; };
 		A57DAE0F18A5ACA300DA5F60 /* TYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYAppDelegate.m; sourceTree = "<group>"; };
-		A57DAE1718A5ACA300DA5F60 /* TYTimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYTimelineViewController.h; sourceTree = "<group>"; };
-		A57DAE1818A5ACA300DA5F60 /* TYTimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYTimelineViewController.m; sourceTree = "<group>"; };
+		A57DAE1718A5ACA300DA5F60 /* TYTweetFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYTweetFeedViewController.h; sourceTree = "<group>"; };
+		A57DAE1818A5ACA300DA5F60 /* TYTweetFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYTweetFeedViewController.m; sourceTree = "<group>"; };
 		A57DAE1A18A5ACA300DA5F60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A57DAE2018A5ACA300DA5F60 /* TweetyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57DAE2118A5ACA300DA5F60 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A57DAE2918A5ACA300DA5F60 /* TweetyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TweetyTests-Info.plist"; sourceTree = "<group>"; };
 		A57DAE2B18A5ACA300DA5F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A57DAE2D18A5ACA300DA5F60 /* TweetyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetyTests.m; sourceTree = "<group>"; };
-		A57DAE3818A5B10A00DA5F60 /* TYTimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYTimelineViewController.xib; sourceTree = "<group>"; };
+		A57DAE3818A5B10A00DA5F60 /* TYTweetFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYTweetFeedViewController.xib; sourceTree = "<group>"; };
 		A57DAE3D18A5C05E00DA5F60 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A57DAE3F18A5C0B700DA5F60 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A5CB2BEE18A5C3CC00EACA57 /* TYTimelineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTimelineModel.h; sourceTree = "<group>"; };
@@ -266,6 +269,24 @@
 			name = "User's tweets";
 			sourceTree = "<group>";
 		};
+		A55CCF7A18A81909007BB860 /* Tweet Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				A5FE0DE718A5F9040013FA04 /* Base class */,
+				A55CCF7B18A81913007BB860 /* Timeline */,
+			);
+			name = "Tweet Feeds";
+			sourceTree = "<group>";
+		};
+		A55CCF7B18A81913007BB860 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				A55CCF7C18A81958007BB860 /* TYTimelineViewController.h */,
+				A55CCF7D18A81958007BB860 /* TYTimelineViewController.m */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
 		A57DADF318A5ACA300DA5F60 = {
 			isa = PBXGroup;
 			children = (
@@ -345,10 +366,10 @@
 		A57DAE3718A5B09D00DA5F60 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A55CCF7A18A81909007BB860 /* Tweet Feeds */,
 				A55CCF6118A706C9007BB860 /* Profile */,
 				A55CCF5B18A6F2CD007BB860 /* Tweet Detail */,
 				A5FE0DE818A5F9110013FA04 /* Login */,
-				A5FE0DE718A5F9040013FA04 /* Timeline */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -363,14 +384,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		A5FE0DE718A5F9040013FA04 /* Timeline */ = {
+		A5FE0DE718A5F9040013FA04 /* Base class */ = {
 			isa = PBXGroup;
 			children = (
-				A57DAE1718A5ACA300DA5F60 /* TYTimelineViewController.h */,
-				A57DAE1818A5ACA300DA5F60 /* TYTimelineViewController.m */,
-				A57DAE3818A5B10A00DA5F60 /* TYTimelineViewController.xib */,
+				A57DAE1718A5ACA300DA5F60 /* TYTweetFeedViewController.h */,
+				A57DAE1818A5ACA300DA5F60 /* TYTweetFeedViewController.m */,
+				A57DAE3818A5B10A00DA5F60 /* TYTweetFeedViewController.xib */,
 			);
-			name = Timeline;
+			name = "Base class";
 			sourceTree = "<group>";
 		};
 		A5FE0DE818A5F9110013FA04 /* Login */ = {
@@ -493,7 +514,7 @@
 				A57DAE1B18A5ACA300DA5F60 /* Images.xcassets in Resources */,
 				A57DAE0A18A5ACA300DA5F60 /* InfoPlist.strings in Resources */,
 				A55CCF6B18A70B7D007BB860 /* TYUserProfileViewController.xib in Resources */,
-				A57DAE3918A5B10B00DA5F60 /* TYTimelineViewController.xib in Resources */,
+				A57DAE3918A5B10B00DA5F60 /* TYTweetFeedViewController.xib in Resources */,
 				A5FE0DED18A5F93D0013FA04 /* TYLoginViewController.xib in Resources */,
 				A55CCF6018A6F4C5007BB860 /* TYTweetDetailViewController.xib in Resources */,
 			);
@@ -522,6 +543,7 @@
 				A55CCF5918A6D742007BB860 /* UIImage+WebP.m in Sources */,
 				A5CB2BF018A5C3CC00EACA57 /* TYTimelineModel.m in Sources */,
 				A57DAE1018A5ACA300DA5F60 /* TYAppDelegate.m in Sources */,
+				A55CCF7E18A81958007BB860 /* TYTimelineViewController.m in Sources */,
 				A5FE0DEC18A5F93D0013FA04 /* TYLoginViewController.m in Sources */,
 				A55CCF5618A6D742007BB860 /* UIButton+WebCache.m in Sources */,
 				A55CCF5518A6D742007BB860 /* SDWebImagePrefetcher.m in Sources */,
@@ -531,7 +553,7 @@
 				A5FE0DF618A683C00013FA04 /* TYTwitteriOS.m in Sources */,
 				A55CCF4E18A6D742007BB860 /* NSData+GIF.m in Sources */,
 				A55CCF5818A6D742007BB860 /* UIImage+MultiFormat.m in Sources */,
-				A57DAE1918A5ACA300DA5F60 /* TYTimelineViewController.m in Sources */,
+				A57DAE1918A5ACA300DA5F60 /* TYTweetFeedViewController.m in Sources */,
 				A55CCF4F18A6D742007BB860 /* SDImageCache.m in Sources */,
 				A5FE0DE618A5F1180013FA04 /* TYTweet.m in Sources */,
 				A55CCF7918A7D9E5007BB860 /* TYUserTweets.m in Sources */,
