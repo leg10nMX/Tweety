@@ -26,6 +26,8 @@
 		A55CCF6A18A70B7D007BB860 /* TYUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF6818A70B7D007BB860 /* TYUserProfileViewController.m */; };
 		A55CCF6B18A70B7D007BB860 /* TYUserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55CCF6918A70B7D007BB860 /* TYUserProfileViewController.xib */; };
 		A55CCF6E18A7108D007BB860 /* TYAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF6D18A7108D007BB860 /* TYAccount.m */; };
+		A55CCF7518A7D658007BB860 /* TYTweetSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF7418A7D658007BB860 /* TYTweetSource.m */; };
+		A55CCF7918A7D9E5007BB860 /* TYUserTweets.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF7818A7D9E5007BB860 /* TYUserTweets.m */; };
 		A57DAE0018A5ACA300DA5F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DADFF18A5ACA300DA5F60 /* Foundation.framework */; };
 		A57DAE0218A5ACA300DA5F60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0118A5ACA300DA5F60 /* CoreGraphics.framework */; };
 		A57DAE0418A5ACA300DA5F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0318A5ACA300DA5F60 /* UIKit.framework */; };
@@ -98,6 +100,10 @@
 		A55CCF6918A70B7D007BB860 /* TYUserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYUserProfileViewController.xib; sourceTree = "<group>"; };
 		A55CCF6C18A7108D007BB860 /* TYAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAccount.h; sourceTree = "<group>"; };
 		A55CCF6D18A7108D007BB860 /* TYAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAccount.m; sourceTree = "<group>"; };
+		A55CCF7318A7D658007BB860 /* TYTweetSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTweetSource.h; sourceTree = "<group>"; };
+		A55CCF7418A7D658007BB860 /* TYTweetSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTweetSource.m; sourceTree = "<group>"; };
+		A55CCF7718A7D9E5007BB860 /* TYUserTweets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYUserTweets.h; sourceTree = "<group>"; };
+		A55CCF7818A7D9E5007BB860 /* TYUserTweets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYUserTweets.m; sourceTree = "<group>"; };
 		A57DADFC18A5ACA300DA5F60 /* Tweety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57DADFF18A5ACA300DA5F60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A57DAE0118A5ACA300DA5F60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -232,6 +238,34 @@
 			name = Account;
 			sourceTree = "<group>";
 		};
+		A55CCF7018A7D4CB007BB860 /* TweetSources */ = {
+			isa = PBXGroup;
+			children = (
+				A55CCF7218A7D588007BB860 /* TweetSource */,
+				A55CCF7618A7D999007BB860 /* User's tweets */,
+				A5FE0DEE18A5FB670013FA04 /* Timeline */,
+			);
+			name = TweetSources;
+			sourceTree = "<group>";
+		};
+		A55CCF7218A7D588007BB860 /* TweetSource */ = {
+			isa = PBXGroup;
+			children = (
+				A55CCF7318A7D658007BB860 /* TYTweetSource.h */,
+				A55CCF7418A7D658007BB860 /* TYTweetSource.m */,
+			);
+			name = TweetSource;
+			sourceTree = "<group>";
+		};
+		A55CCF7618A7D999007BB860 /* User's tweets */ = {
+			isa = PBXGroup;
+			children = (
+				A55CCF7718A7D9E5007BB860 /* TYUserTweets.h */,
+				A55CCF7818A7D9E5007BB860 /* TYUserTweets.m */,
+			);
+			name = "User's tweets";
+			sourceTree = "<group>";
+		};
 		A57DADF318A5ACA300DA5F60 = {
 			isa = PBXGroup;
 			children = (
@@ -322,8 +356,8 @@
 		A5CB2BED18A5C3AF00EACA57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A55CCF7018A7D4CB007BB860 /* TweetSources */,
 				A55CCF6F18A711BC007BB860 /* Account */,
-				A5FE0DEE18A5FB670013FA04 /* Timeline */,
 				A5FE0DEF18A5FB760013FA04 /* Tweet */,
 			);
 			name = Models;
@@ -493,12 +527,14 @@
 				A55CCF5518A6D742007BB860 /* SDWebImagePrefetcher.m in Sources */,
 				A55CCF5318A6D742007BB860 /* SDWebImageDownloaderOperation.m in Sources */,
 				A55CCF6A18A70B7D007BB860 /* TYUserProfileViewController.m in Sources */,
+				A55CCF7518A7D658007BB860 /* TYTweetSource.m in Sources */,
 				A5FE0DF618A683C00013FA04 /* TYTwitteriOS.m in Sources */,
 				A55CCF4E18A6D742007BB860 /* NSData+GIF.m in Sources */,
 				A55CCF5818A6D742007BB860 /* UIImage+MultiFormat.m in Sources */,
 				A57DAE1918A5ACA300DA5F60 /* TYTimelineViewController.m in Sources */,
 				A55CCF4F18A6D742007BB860 /* SDImageCache.m in Sources */,
 				A5FE0DE618A5F1180013FA04 /* TYTweet.m in Sources */,
+				A55CCF7918A7D9E5007BB860 /* TYUserTweets.m in Sources */,
 				A5FE0DF318A5FC3D0013FA04 /* TYTwitter.m in Sources */,
 				A55CCF5718A6D742007BB860 /* UIImage+GIF.m in Sources */,
 				A55CCF6E18A7108D007BB860 /* TYAccount.m in Sources */,

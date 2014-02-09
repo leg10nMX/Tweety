@@ -34,6 +34,10 @@ const TYTwitterFramework useFramework = TYTwitterFrameworkiOS;
   [self.api fetchTimelineBefore:maxId completionBlock:block];
 }
 
+- (void)fetchTweetsForUserScreenName:(NSString *)user beforeTweetId:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
+  [self.api fetchTweetsForUserScreenName:user beforeTweetId:maxId completionBlock:block];
+}
+
 - (void)fetchUserProfileWithCompletionBlock:(void (^)(NSDictionary *))block {
   [self.api fetchUserProfileWithCompletionBlock:block];
 }
@@ -52,5 +56,9 @@ const TYTwitterFramework useFramework = TYTwitterFrameworkiOS;
     }
   });
   return sharedInstance;
+}
+
+- (NSString*)screenName {
+  return [self.api screenName];
 }
 @end
