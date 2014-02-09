@@ -11,6 +11,7 @@
 #import "TYTweet.h"
 #import "UIImageView+WebCache.h"
 #import "TYTweetDetailViewController.h"
+#import "TYUserProfileViewController.h"
 
 @interface TYTimelineViewController ()
 @property (strong, nonatomic) id tweetsUpdateReceivedObserver;
@@ -27,6 +28,8 @@
       [_self.tableView reloadData];
     });
   }];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Profile" style:UIBarButtonItemStyleBordered target:self action:@selector(showProfile)];
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +43,10 @@
 
 #pragma mark - PrivateMethods
 
+- (void)showProfile {
+  TYUserProfileViewController *userProfileController = [[TYUserProfileViewController alloc] initWithNibName:@"TYUserProfileViewController" bundle:[NSBundle mainBundle]];
+  [self.navigationController pushViewController:userProfileController animated:YES];
+}
 
 #pragma mark - Protocols
 #pragma mark UITableViewDataSource

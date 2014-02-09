@@ -46,8 +46,8 @@
   });
 }
 
-- (void)fetchUserSettingsWithCompletionBlock:(void (^)(NSDictionary *))block {
-  NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/account/settings.json"];
+- (void)fetchUserProfileWithCompletionBlock:(void (^)(NSDictionary *))block {
+  NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/account/verify_credentials.json"];
   [self authenticatedRequestWithUrl:url parameter:nil completionBlock:block];
 }
 
