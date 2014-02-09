@@ -46,6 +46,11 @@
   });
 }
 
+- (void)fetchUserSettingsWithCompletionBlock:(void (^)(NSDictionary *))block {
+  NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/account/settings.json"];
+  [self authenticatedRequestWithUrl:url parameter:nil completionBlock:block];
+}
+
 - (void)fetchTimelineBefore:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
   NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObject:@"count"
                                                                        forKey: @"10"];
@@ -53,6 +58,10 @@
     [parameters setObject:maxId forKey:@"max_id"];
   }
   NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json"];
+  [self authenticatedRequestWithUrl:url parameter:parameters completionBlock:block];
+}
+
+- (void)authenticatedRequestWithUrl:(NSURL*)url parameter:(NSDictionary*)parameters completionBlock:(void (^)(id))block {
   SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                           requestMethod:SLRequestMethodGET
                                                     URL:url
