@@ -35,4 +35,12 @@
 - (NSString*)profileImage {
   return [[self user] objectForKey:@"profile_image_url"];
 }
+
+- (NSString*)userDescription {
+  return [[self user] objectForKey:@"description"];
+}
+
+- (NSString*)screenName {
+  return [[self user] objectForKey:@"screen_name"];
+}
 @end

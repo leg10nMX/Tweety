@@ -10,6 +10,7 @@
 #import "TYTimelineModel.h"
 #import "TYTweet.h"
 #import "UIImageView+WebCache.h"
+#import "TYTweetDetailViewController.h"
 
 @interface TYTimelineViewController ()
 @property (strong, nonatomic) id tweetsUpdateReceivedObserver;
@@ -51,6 +52,12 @@
 }
 
 #pragma mark UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  TYTweet *tweet = [self.model tweetAtIndex:[indexPath row]];
+  TYTweetDetailViewController *controller = [[TYTweetDetailViewController alloc] initWithNibName:@"TYTweetDetailViewController" bundle:[NSBundle mainBundle] tweet:tweet];
+  [self.navigationController pushViewController:controller animated:YES];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return 90;
 }
@@ -59,7 +66,8 @@
   NSString *cellIdentifier = @"YTTimelineCell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
   if (!cell) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                  reuseIdentifier:cellIdentifier];
     [cell.textLabel setFont:[UIFont systemFontOfSize:14]];
     
     [cell.detailTextLabel setFont:[UIFont systemFontOfSize:12]];

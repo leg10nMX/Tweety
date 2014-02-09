@@ -36,4 +36,8 @@
  *  The URL of the profile Image as string.
  */
 @property (strong, nonatomic) NSString *profileImage;
+
+@property (strong, nonatomic) NSString *screenName;
+
+@property (strong, nonatomic) NSString *userDescription;
 @end
