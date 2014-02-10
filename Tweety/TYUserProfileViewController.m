@@ -9,6 +9,7 @@
 #import "TYUserProfileViewController.h"
 #import "TYAccount.h"
 #import "UIImageView+WebCache.h"
+#import "TYUserTweetsViewController.h"
 
 @interface TYUserProfileViewController ()
 @property (strong, nonatomic)TYAccount *model;
@@ -52,6 +53,7 @@
 
 #pragma mark - IBActions
 - (IBAction)showTweets:(id)sender {
-  
+  TYUserTweetsViewController *controllet = [[TYUserTweetsViewController alloc] initWithNibName:@"TYTweetFeedViewController" bundle:[NSBundle mainBundle]];
+  [self.navigationController pushViewController:controllet animated:YES];
 }
 @end

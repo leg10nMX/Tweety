@@ -7,6 +7,7 @@
 //
 
 #import "TYUserTweetsViewController.h"
+#import "TYUserTweets.h"
 
 @interface TYUserTweetsViewController ()
 
@@ -18,21 +19,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+      self.model = [[TYUserTweets alloc] init];
     }
     return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

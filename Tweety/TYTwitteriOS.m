@@ -54,22 +54,22 @@
 - (void)fetchTweetsFromURL:(NSString*)urlAsString beforeTweetId:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
 }
 
-- (void)fetchTweetsForUserScreenName:(NSString *)user beforeTweetId:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
-  
-  NSMutableDictionary *parameters = [NSMutableDictionary  dictionaryWithObjectsAndKeys:@"10", @"count", user, @"screen_name", nil];
+- (void)fetchTweetsForUserId:(NSString *)userId beforeTweetId:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
+  NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"10", @"count", userId, @"user_id", nil];
   if (maxId) {
     [parameters setObject:maxId forKey:@"max_id"];
   }
+  
   NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json"];
   [self authenticatedRequestWithUrl:url parameter:parameters completionBlock:block];
 }
 
 - (void) fetchTimelineBefore:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
-  
-  NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"10",@"count",nil];
+  NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"10", @"count",nil];
   if (maxId) {
     [parameters setObject:maxId forKey:@"max_id"];
   }
+  
   NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json"];
   [self authenticatedRequestWithUrl:url parameter:parameters completionBlock:block];
 }
@@ -90,7 +90,7 @@
   }];
 }
 
-- (NSString*)screenName {
+- (NSString*)userId {
   return [self.account valueForKeyPath:@"properties.user_id"];
 }
 @end

@@ -11,7 +11,7 @@
 #import "TYTimelineModel.h"
 
 @interface TYTimelineViewController ()
-@property (strong, nonatomic) id authorizationNeededObserver;
+
 @end
 
 @implementation TYTimelineViewController
@@ -35,20 +35,5 @@
   TYUserProfileViewController *userProfileController = [[TYUserProfileViewController alloc] initWithNibName:@"TYUserProfileViewController" bundle:[NSBundle mainBundle]];
   [self.navigationController pushViewController:userProfileController animated:YES];
 }
-
-- (void)dealloc {
-  [[NSNotificationCenter defaultCenter] removeObserver:self.authorizationNeededObserver];
-}
-
-#pragma mark - PrivateMethods
-- (void)presentLogin {
-  
-}
-
-#pragma mark - Protocols
-#pragma mark UITableViewDelegate
-
-
-#pragma mark UITableViewDataSource
 
 @end

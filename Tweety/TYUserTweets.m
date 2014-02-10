@@ -12,7 +12,7 @@
 @implementation TYUserTweets
 
 - (void)fetchFromSourceBeforeId:(NSString*)maxId {
-  [[TYTwitter sharedInstance] fetchTweetsForUserScreenName:[[TYTwitter sharedInstance] screenName] beforeTweetId:maxId completionBlock:^(NSArray *tweetArray) {
+  [[TYTwitter sharedInstance] fetchTweetsForUserId:[[TYTwitter sharedInstance] userId] beforeTweetId:maxId completionBlock:^(NSArray *tweetArray) {
     [self updateTweets:tweetArray];
   }];
 }

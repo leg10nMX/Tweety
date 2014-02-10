@@ -20,11 +20,11 @@
 - (NSString*)maxId {
   NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"id" ascending:NO];
   NSArray *tweets = [self.tweets sortedArrayUsingDescriptors:@[sortDescriptor]];
-  return [tweets firstObject];
+  return [[tweets lastObject] objectForKey:@"id_str"];
 }
 
 - (void)updateTweets:(NSArray*)tweetArray {
-  if (!self.tweets) {
+  if (!_tweets) { //since the first time the model receives a notification to update the tweets array, it would be nil and trigger another fetch, so it's being checked directly from the ivar instead.
     self.tweets = tweetArray;
   } else {
     self.tweets = [self.tweets arrayByAddingObjectsFromArray:tweetArray];

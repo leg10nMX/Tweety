@@ -14,6 +14,4 @@
  */
 @interface TYTimelineModel : TYTweetSource
 
-@interface TYTimelineModel : NSObject
-- (BOOL)hasAuthorization;
 @end
