@@ -23,6 +23,10 @@
   return [[tweets lastObject] objectForKey:@"id_str"];
 }
 
+- (void)reloadTimeline {
+  self.tweets = nil;
+}
+
 - (void)updateTweets:(NSArray*)tweetArray {
   if (!_tweets) { //since the first time the model receives a notification to update the tweets array, it would be nil and trigger another fetch, so it's being checked directly from the ivar instead.
     self.tweets = tweetArray;

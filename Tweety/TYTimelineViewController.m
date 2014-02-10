@@ -9,6 +9,8 @@
 #import "TYTimelineViewController.h"
 #import "TYUserProfileViewController.h"
 #import "TYTimelineModel.h"
+#import "BAAlertView.h"
+#import "TYTwitter.h"
 
 @interface TYTimelineViewController ()
 
@@ -26,10 +28,30 @@
   [super viewDidLoad];
   
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Profile" style:UIBarButtonItemStyleBordered target:self action:@selector(showProfile)];
+  
+  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Write Tweet" style:UIBarButtonItemStyleBordered target:self action:@selector(tweet)];
 }
 
 
 #pragma mark - PrivateMethods
+- (void)tweet {
+  __weak TYTimelineViewController *_self = self;
+  BAAlertView *alert = [[BAAlertView alloc] initWithTitle:@"Write a tweet" message:@"Enter the text" cancelButtonTitle:@"Cancel" cancelBlock:nil otherButtonTitles:@[@"Tweet!"] otherButtonBlocks:@[^(BAAlertView *alertView) {
+    
+    if (![[TYTwitter sharedInstance] postTweet:[[alertView textFieldAtIndex:0] text] inResponseTo:nil error:nil completionBlock:^(NSDictionary *settings) {
+      [_self.model reloadTimeline];
+      [_self.tableView reloadData];
+    }]) {
+      [[[UIAlertView alloc] initWithTitle:@"Error"
+                                  message:@"Tweet too long"
+                                 delegate:nil
+                        cancelButtonTitle:@"OK"
+                        otherButtonTitles:nil] show];
+    }
+  }]];
+  alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+  [alert show];
+}
 
 - (void)showProfile {
   TYUserProfileViewController *userProfileController = [[TYUserProfileViewController alloc] initWithNibName:@"TYUserProfileViewController" bundle:[NSBundle mainBundle]];

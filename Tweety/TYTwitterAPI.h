@@ -20,4 +20,5 @@
 - (void)fetchTweetsForUserId:(NSString*)user beforeTweetId:(NSString*)maxId completionBlock:(void (^)(NSArray* tweetArray))block;
 - (void)fetchUserProfileWithCompletionBlock:(void (^)(NSDictionary* settings))block;
 - (NSString*)userId;
+- (BOOL)postTweet:(NSString*)text inResponseTo:(NSString*)tweetId error:(NSError*)error completionBlock:(void (^)(NSDictionary* settings))block;
 @end

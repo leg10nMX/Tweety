@@ -61,4 +61,8 @@ const TYTwitterFramework useFramework = TYTwitterFrameworkiOS;
 - (NSString*)userId {
   return [self.api userId];
 }
+
+- (BOOL)postTweet:(NSString *)text inResponseTo:(NSString *)tweetId error:(NSError *)error completionBlock:(void (^)(NSDictionary *))block {
+  return [self.api postTweet:text inResponseTo:tweetId error:error completionBlock:block];
+}
 @end

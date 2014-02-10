@@ -45,4 +45,9 @@ static NSString *kTYTweetsReceivedNotification = @"kTYTweetsReceivedNotification
  *  @param maxId the max_id parameter for the tweet retrieval.
  */
 - (void)fetchFromSourceBeforeId:(NSString*)maxId;
+
+/**
+ *  Discards the current Timeline and forces a reload, idealli this method would cache the existing tweets and load the new ones. not enough time right now...
+ */
+- (void)reloadTimeline;
 @end

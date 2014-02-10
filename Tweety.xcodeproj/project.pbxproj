@@ -30,6 +30,7 @@
 		A55CCF7918A7D9E5007BB860 /* TYUserTweets.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF7818A7D9E5007BB860 /* TYUserTweets.m */; };
 		A55CCF7E18A81958007BB860 /* TYTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF7D18A81958007BB860 /* TYTimelineViewController.m */; };
 		A55CCF8218A81FEE007BB860 /* TYUserTweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF8118A81FEE007BB860 /* TYUserTweetsViewController.m */; };
+		A55CCF8618A85AE0007BB860 /* BAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CCF8518A85AE0007BB860 /* BAAlertView.m */; };
 		A57DAE0018A5ACA300DA5F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DADFF18A5ACA300DA5F60 /* Foundation.framework */; };
 		A57DAE0218A5ACA300DA5F60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0118A5ACA300DA5F60 /* CoreGraphics.framework */; };
 		A57DAE0418A5ACA300DA5F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DAE0318A5ACA300DA5F60 /* UIKit.framework */; };
@@ -110,6 +111,8 @@
 		A55CCF7D18A81958007BB860 /* TYTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTimelineViewController.m; sourceTree = "<group>"; };
 		A55CCF8018A81FEE007BB860 /* TYUserTweetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYUserTweetsViewController.h; sourceTree = "<group>"; };
 		A55CCF8118A81FEE007BB860 /* TYUserTweetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYUserTweetsViewController.m; sourceTree = "<group>"; };
+		A55CCF8418A85AE0007BB860 /* BAAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAlertView.h; sourceTree = "<group>"; };
+		A55CCF8518A85AE0007BB860 /* BAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAlertView.m; sourceTree = "<group>"; };
 		A57DADFC18A5ACA300DA5F60 /* Tweety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57DADFF18A5ACA300DA5F60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A57DAE0118A5ACA300DA5F60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +177,7 @@
 		A55CCF2E18A6D635007BB860 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A55CCF8318A85A9B007BB860 /* BAAlertView */,
 				A55CCF2F18A6D6DE007BB860 /* SDWebImage */,
 			);
 			name = Libraries;
@@ -298,6 +302,15 @@
 				A55CCF8118A81FEE007BB860 /* TYUserTweetsViewController.m */,
 			);
 			name = "User Tweets";
+			sourceTree = "<group>";
+		};
+		A55CCF8318A85A9B007BB860 /* BAAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				A55CCF8418A85AE0007BB860 /* BAAlertView.h */,
+				A55CCF8518A85AE0007BB860 /* BAAlertView.m */,
+			);
+			name = BAAlertView;
 			sourceTree = "<group>";
 		};
 		A57DADF318A5ACA300DA5F60 = {
@@ -548,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55CCF8618A85AE0007BB860 /* BAAlertView.m in Sources */,
 				A55CCF5A18A6D742007BB860 /* UIImageView+WebCache.m in Sources */,
 				A55CCF5118A6D742007BB860 /* SDWebImageDecoder.m in Sources */,
 				A55CCF5418A6D742007BB860 /* SDWebImageManager.m in Sources */,

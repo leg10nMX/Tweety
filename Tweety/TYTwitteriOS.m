@@ -46,9 +46,25 @@
   });
 }
 
+- (BOOL)postTweet:(NSString *)text inResponseTo:(NSString *)tweetId error:(NSError *)error completionBlock:(void (^)(NSDictionary *))block{
+  if ([text length] < 140) {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObject:text forKey:@"status"];
+    if (tweetId) {
+      [parameters setObject:tweetId forKey:@"in_reply_to_status_id"];
+    }
+    
+    [self authenticatedRequestWithUrl:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"]
+                               method:SLRequestMethodPOST
+                            parameter:parameters
+                      completionBlock:block];
+    return YES;
+  }
+  return NO;
+}
+
 - (void)fetchUserProfileWithCompletionBlock:(void (^)(NSDictionary *))block {
   NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/account/verify_credentials.json"];
-  [self authenticatedRequestWithUrl:url parameter:nil completionBlock:block];
+  [self authenticatedRequestWithUrl:url method:SLRequestMethodGET parameter:nil completionBlock:block];
 }
 
 - (void)fetchTweetsFromURL:(NSString*)urlAsString beforeTweetId:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
@@ -61,7 +77,7 @@
   }
   
   NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json"];
-  [self authenticatedRequestWithUrl:url parameter:parameters completionBlock:block];
+  [self authenticatedRequestWithUrl:url method:SLRequestMethodGET parameter:parameters completionBlock:block];
 }
 
 - (void) fetchTimelineBefore:(NSString *)maxId completionBlock:(void (^)(NSArray *))block {
@@ -71,12 +87,12 @@
   }
   
   NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json"];
-  [self authenticatedRequestWithUrl:url parameter:parameters completionBlock:block];
+  [self authenticatedRequestWithUrl:url method:SLRequestMethodGET parameter:parameters completionBlock:block];
 }
 
-- (void)authenticatedRequestWithUrl:(NSURL*)url parameter:(NSDictionary*)parameters completionBlock:(void (^)(id))block {
+- (void)authenticatedRequestWithUrl:(NSURL*)url method:(SLRequestMethod)method parameter:(NSDictionary*)parameters completionBlock:(void (^)(id))block {
   SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
-                                          requestMethod:SLRequestMethodGET
+                                          requestMethod:method
                                                     URL:url
                                              parameters:parameters];
   request.account = self.account;
